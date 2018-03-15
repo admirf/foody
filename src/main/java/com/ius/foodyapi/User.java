@@ -15,6 +15,8 @@ public class User {
 
     protected User() {}
 
+
+    // constructor
     public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
