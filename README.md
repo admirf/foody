@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to foody.
 
-You can use the [editor on GitHub](https://github.com/admirf/foody/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+foody is a project created for Software Engineering course [@International University of Sarajevo](https://ius.edu.ba) to search for local restaurants or fast foods and give for best and cheapest food.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
