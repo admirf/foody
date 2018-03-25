@@ -1,37 +1,19 @@
 ## Welcome to foody.
 
-foody is a project created for Software Engineering course [@International University of Sarajevo](https://ius.edu.ba) to search for local restaurants or fast foods and give for best and cheapest food.
+foody is a project created for Software Engineering course [@International University of Sarajevo](https://ius.edu.ba) to search for local restaurants or fast foods and give results for best and cheapest food. Simply enter the type of the food you want to eat in our search text field, and foody will give you closest restaurants and fast foods with cheapest price, providing you with all needed contact info so you easy get your foodz with foody.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+It is intended to be written in Java using [Spring](https://spring.io/) framework, along with [PostgreSQL](https://www.postgresql.org/) for storing necessary data, [Hibernate](http://hibernate.org/) for ORM, and [Vue.js](https://vuejs.org/) at the front-end side of our application. If you are reading this, and want to check the code, you can check the github repository or clone it to your machine
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+git clone https://github.com/admirf/foody.git
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For more details see [requirements](https://drive.google.com/open?id=1hgP9VLhkY6vSMBxmaxJP3eYOtXn9ZeWP)  document - revision 1.0.
 
-### Jekyll Themes
+### Dependencies
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/admirf/foody/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+If you downloaded source files from github repository or you cloned project to your machine, all important dependencies for Spring are contained in `pom.xml` configuration file, so it will provide you with all dependencies and you are ready to code.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with foody? Check out [issues](https://github.com/admirf/foody/issues) or [documentation](https://github.com/admirf/foody/wiki) and we’ll help you sort it out.
