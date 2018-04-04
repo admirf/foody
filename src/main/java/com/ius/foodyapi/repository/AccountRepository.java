@@ -1,9 +1,10 @@
 package com.ius.foodyapi.repository;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
+import com.ius.foodyapi.model.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-public interface AccountRepository {
-    @RepositoryRestResource(collectionResourceRel = "account", path = "accounts")
-    public interface Account extends PagingAndSortingRepository<Account, Long> { }
+@RepositoryRestResource(collectionResourceRel = "account", path = "accounts")
+public interface AccountRepository  extends JpaRepository<Account, Long> {
+    public Account findByUsername(String username);
 }

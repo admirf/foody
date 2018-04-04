@@ -10,10 +10,19 @@ public class Item {
     private String name;
     private String description;
     private Double price;
+    private String imgUrl;
     @ManyToOne
     private Business business;
     @ManyToOne
     private Category category;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 
     public String getName() {
         return name;
