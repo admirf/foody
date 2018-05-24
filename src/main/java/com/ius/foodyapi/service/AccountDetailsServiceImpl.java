@@ -9,6 +9,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import static java.util.Collections.emptyList;
 
+/**
+ * This is the only service that we currently have
+ * and it is a Service implementation called Account Details
+ * which has to be provided to the authentication and authorization.
+ */
 @Service
 public class AccountDetailsServiceImpl implements UserDetailsService {
     private AccountRepository accountRepository;
