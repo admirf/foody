@@ -23,7 +23,14 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/items").permitAll()
+                .antMatchers("/details").permitAll()
+                .antMatchers("/providers").permitAll()
+                .antMatchers("/providers/{id}").permitAll()
+                .antMatchers("/accounts").permitAll()
+                .antMatchers("/accounts/{id}").permitAll()
+                .antMatchers("/businesses").permitAll()
+                .antMatchers("/items").permitAll()
+                .antMatchers("/items/{id}").permitAll()
                 .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
                 .anyRequest().authenticated()
                 .and()
