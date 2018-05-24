@@ -2,6 +2,9 @@ package com.ius.foodyapi.model;
 
 import javax.persistence.*;
 
+/**
+ * This is the Entity that we defined for the Account Model
+ */
 @Entity
 public class Account {
     @Id
