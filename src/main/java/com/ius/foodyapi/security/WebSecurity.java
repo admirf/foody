@@ -22,20 +22,19 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests()
-                .antMatchers("/details").permitAll()
-                .antMatchers("/providers").permitAll()
-                .antMatchers("/providers/{id}").permitAll()
-                .antMatchers("/accounts").permitAll()
-                .antMatchers("/accounts/{id}").permitAll()
-                .antMatchers("/businesses").permitAll()
-                .antMatchers("/items").permitAll()
-                .antMatchers("/items/{id}").permitAll()
+        http.authorizeRequests()
+                .antMatchers(HttpMethod.GET, "/items").permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/items").permitAll()
+                .antMatchers(HttpMethod.GET, "/providers").permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/accounts").permitAll()
                 .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
+                .antMatchers(HttpMethod.POST, "/login").permitAll()
+                .antMatchers(HttpMethod.GET, "/search").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))
-                .addFilter(new JWTAuthorizationFilter(authenticationManager()));
+                .addFilter(new JWTAuthorizationFilter(authenticationManager()))
+                .csrf().disable();
     }
 
     @Override

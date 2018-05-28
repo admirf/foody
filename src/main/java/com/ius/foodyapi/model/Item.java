@@ -1,5 +1,8 @@
 package com.ius.foodyapi.model;
 
+import com.vividsolutions.jts.geom.Geometry;
+import com.vividsolutions.jts.geom.Point;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,10 +14,10 @@ public class Item {
     private String description;
     private Double price;
     private String imgUrl;
+    private String category;
+    private Point location;
     @ManyToOne
     private Business business;
-    @ManyToOne
-    private Category category;
 
     public String getImgUrl() {
         return imgUrl;
@@ -48,11 +51,11 @@ public class Item {
         this.business = business;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -62,5 +65,17 @@ public class Item {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Point getLocation() {
+        return location;
+    }
+
+    public void setLocation(Point location) {
+        this.location = location;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

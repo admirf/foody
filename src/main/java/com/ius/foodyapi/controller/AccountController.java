@@ -8,6 +8,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Account is in our case User
+ * We use postgresql where user is a reserved keyword
+ * so we chose the naming to be Account instead of User
+ * The only functionality contained in the Account controller is
+ * the registration process, all other operations on account
+ * are automatically mapped to the CRUD of the Account Repository
+ */
 @RestController
 public class AccountController {
 
